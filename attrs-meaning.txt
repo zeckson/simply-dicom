@@ -1,0 +1,23 @@
+(0008,0020) DA [20171016] StudyDate
+(0008,0021) DA [20171016] SeriesDate
+(0008,0022) DA [20171016] AcquisitionDate
+(0008,0023) DA [20171016] ContentDate
+(0008,0030) TM [211123] StudyTime
+(0008,0031) TM [211737] SeriesTime
+(0008,0032) TM [211737] AcquisitionTime
+(0008,0033) TM [211737] ContentTime
+(0008,0080) LO [CMRI PETROGRADSKY] InstitutionName
+(0008,1030) LO [L-SP] StudyDescription
+(0008,103E) LO [Ax T2  FSE] SeriesDescription
+(0008,1090) LO [GENESIS_SIGNA] ManufacturerModelName
+(0009,0010) LO [GEMS_IDEN_01] PrivateCreatorID
+(0010,0010) PN [SCHEPOT`EV  E.  B.] PatientName
+(0010,0020) LO [18243] PatientID
+(0010,0030) DA [19970130] PatientBirthDate
+(0010,0040) CS [M] PatientSex
+(0010,1010) AS [020Y] PatientAge
+(0010,1030) DS [60] PatientWeight
+(0010,21B0) LT [] AdditionalPatientHistory
+(0020,0011) IS [5] SeriesNumber
+(0020,0012) IS [0] AcquisitionNumber
+(0020,0013) IS [2] InstanceNumber
