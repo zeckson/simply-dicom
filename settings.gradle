@@ -22,8 +22,12 @@
 
 include ':simplyDICOM'
 
-def homePath=System.properties['user.home']
-def opencvsdk=homePath + '/dev/OpenCV-android-sdk3'
+Properties properties = new Properties()
+properties.load(new FileInputStream('local.properties'))
+def opencvDir = properties.getProperty('opencv.dir')
+
+def homePath = System.properties['user.home']
+def opencvsdk = opencvDir ?: homePath + '/dev/OpenCV-android-sdk3'
 // You can put declaration above into gradle.properties file instead (including file in HOME directory),
 // but without 'def' and apostrophe symbols ('): opencvsdk=<path_to_opencv_android_sdk_rootdir>
 include ':opencv'
