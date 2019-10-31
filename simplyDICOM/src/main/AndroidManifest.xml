@@ -22,6 +22,7 @@
   ~ THE SOFTWARE.
   -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="us.cboyd.android.dicom">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application 
@@ -34,17 +35,13 @@
             <intent-filter >
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="application/*" />
-                <data android:pathPattern=".*\\.dcm" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.GET_CONTENT" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.OPENABLE" />
-
-                <data android:mimeType="application/*" />
-                <data android:pathPattern=".*\\.dcm" />
+                <!-- Do not set host="*" since it won't work -->
+                <!-- For more details see https://stackoverflow.com/questions/1733195/android-intent-filter-for-a-particular-file-extension -->
+                <data
+                    android:scheme="content"
+                    android:mimeType="application/*"
+                    android:pathPattern=".*\\.dcm"
+                    tools:ignore="AppLinkUrlError" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
